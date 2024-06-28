@@ -1,3 +1,7 @@
+# "on" for activate the teleportation on connection
+# "off" for deactivate the teleportation on connection
+status: "on"
+
 teleport_coordinates:
   world: world
   x: 0.0

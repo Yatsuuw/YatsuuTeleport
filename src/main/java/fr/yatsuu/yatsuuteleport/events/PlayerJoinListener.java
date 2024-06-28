@@ -8,6 +8,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
+import java.util.Objects;
+
 public class PlayerJoinListener implements Listener {
 
     private final YatsuuTeleport plugin;
@@ -20,6 +22,10 @@ public class PlayerJoinListener implements Listener {
 
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
+
+        if (!Objects.requireNonNull(plugin.getConfig().getString("status")).equalsIgnoreCase("on")) {
+            return;
+        }
 
         Player player = event.getPlayer();
 
