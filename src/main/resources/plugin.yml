@@ -1,0 +1,26 @@
+name: YatsuuTeleport
+version: '${project.version}'
+main: fr.yatsuu.yatsuuteleport.YatsuuTeleport
+api-version: '1.21'
+description: Player teleportation on connection
+authors:
+  - Yatsuu
+website: https://yatsuu.fr/
+
+commands:
+  setteleport:
+    description: Sets the teleport point and direction
+    usage: /setteleport
+    permission: yatsuuteleport.command.setteleport
+  teleport:
+    description: Teleport a player to the set coordinates
+    usage: /teleport [player]
+    permission: yatsuuteleport.command.teleport
+  reloadconfig:
+    description: Reloads the plugin configuration
+    usage: /reloadconfig
+    permission: yatsuuteleport.command.reloadconfig
+  ythelp:
+    description: List of plugin commands
+    usage: /ythelp
+    permission: yatsuuteleport.command.help

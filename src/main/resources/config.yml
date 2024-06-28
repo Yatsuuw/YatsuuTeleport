@@ -1,0 +1,18 @@
+teleport_coordinates:
+  world: world
+  x: 0.0
+  y: 90
+  z: 0.0
+  yaw: 0.0
+  pitch: 0.0
+
+messages:
+  no_permission: "You do not have {permission} to run this command."
+  teleport_point: "Teleport location and direction set !"
+  not_player_send_command: "This command can only be executed by a player."
+  player_not_found: "Player not found."
+  usage_teleport: "/teleport [Player]"
+  sender_teleport: " has been teleported to the server spawn."
+  target_teleport: "You've been teleported to the server spawn."
+  success_reload: "Configuration reloaded."
+  commands: "Available commands :"
