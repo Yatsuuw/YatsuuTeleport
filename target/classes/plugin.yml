@@ -18,9 +18,9 @@ commands:
     permission: yatsuuteleport.command.teleport
   ytload:
     description: Reloads the plugin configuration
-    usage: /reloadconfig
-    permission: yatsuuteleport.command.reloadconfig
+    usage: /ytload
+    permission: yatsuuteleport.command.ytload
   ythelp:
     description: List of plugin commands
     usage: /ythelp
-    permission: yatsuuteleport.command.help
+    permission: yatsuuteleport.command.ythelp

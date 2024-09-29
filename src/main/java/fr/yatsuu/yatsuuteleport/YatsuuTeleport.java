@@ -1,9 +1,6 @@
 package fr.yatsuu.yatsuuteleport;
 
-import fr.yatsuu.yatsuuteleport.commands.CommandTeleport;
-import fr.yatsuu.yatsuuteleport.commands.HelpCommand;
-import fr.yatsuu.yatsuuteleport.commands.ReloadConfigCommand;
-import fr.yatsuu.yatsuuteleport.commands.SetTeleportCommand;
+import fr.yatsuu.yatsuuteleport.commands.*;
 import fr.yatsuu.yatsuuteleport.events.PlayerJoinListener;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -25,9 +22,9 @@ public final class YatsuuTeleport extends JavaPlugin {
 
         // Register commands
         Objects.requireNonNull(getCommand("setteleport")).setExecutor(new SetTeleportCommand(this));
-        Objects.requireNonNull(getCommand("teleport")).setExecutor(new CommandTeleport(this));
-        Objects.requireNonNull(getCommand("ytload")).setExecutor(new ReloadConfigCommand(this));
-        Objects.requireNonNull(getCommand("ythelp")).setExecutor(new HelpCommand(this));
+        Objects.requireNonNull(getCommand("teleport")).setExecutor(new TeleportCommand(this));
+        Objects.requireNonNull(getCommand("ytload")).setExecutor(new ytLoadCommand(this));
+        Objects.requireNonNull(getCommand("ythelp")).setExecutor(new ytHelpCommand(this));
 
     }
 
