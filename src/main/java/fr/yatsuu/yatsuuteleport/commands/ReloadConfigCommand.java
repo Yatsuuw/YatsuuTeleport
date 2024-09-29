@@ -26,12 +26,12 @@ public class ReloadConfigCommand implements CommandExecutor {
         if (!sender.hasPermission("yatsuuteleport.command.reload")) {
 
             String no_perm = Objects.requireNonNull(plugin.getConfig().getString("messages.no_perm")).replace("{permission}", "yatsuuteleport.command.reload");
-            sender.sendMessage(ChatColor.RED + no_perm);
+            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', no_perm));
 
         } else {
 
             plugin.reloadConfig();
-            sender.sendMessage(ChatColor.GREEN + plugin.getConfig().getString("messages.success_reload"));
+            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', Objects.requireNonNull(plugin.getConfig().getString("messages.success_reload"))));
 
         }
 

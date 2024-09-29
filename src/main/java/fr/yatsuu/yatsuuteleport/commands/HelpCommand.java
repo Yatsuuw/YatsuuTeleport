@@ -26,13 +26,26 @@ public class HelpCommand implements CommandExecutor {
         if (!sender.hasPermission("yatsuuteleport.command.help")) {
 
             String no_perm = Objects.requireNonNull(plugin.getConfig().getString("messages.no_perm")).replace("{permission}", "yatsuuteleport.command.help");
-            sender.sendMessage(ChatColor.RED + no_perm);
+            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', no_perm));
 
         } else {
 
-            sender.sendMessage(ChatColor.GREEN + plugin.getConfig().getString("messages.commands"));
+            StringBuilder response = new StringBuilder();
 
-            plugin.getDescription().getCommands().forEach((cmd, desc) -> sender.sendMessage(ChatColor.YELLOW + "/" + cmd + ": " + desc.get("description") ));
+            response.append(ChatColor.translateAlternateColorCodes('&', Objects.requireNonNull(plugin.getConfig().getString("messages.commands")))).append("\n");
+
+            String commandFormat = plugin.getConfig().getString("messages.command_format");
+
+            plugin.getDescription().getCommands().forEach((cmd, desc) -> {
+
+                assert commandFormat != null;
+                String formattedCommand = commandFormat.replace("{command}", cmd).replace("{description}", (CharSequence) desc.get("description"));
+
+                response.append(ChatColor.translateAlternateColorCodes('&', formattedCommand)).append("\n");
+
+            });
+
+            sender.sendMessage(response.toString());
 
         }
 

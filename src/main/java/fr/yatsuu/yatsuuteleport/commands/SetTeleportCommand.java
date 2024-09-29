@@ -28,13 +28,13 @@ public class SetTeleportCommand implements CommandExecutor {
         if (!sender.hasPermission("yatsuuteleport.command.setteleport")) {
 
             String no_perm = Objects.requireNonNull(plugin.getConfig().getString("messages.no_perm")).replace("{permission}", "yatsuuteleport.command.setteleport");
-            sender.sendMessage(ChatColor.RED + no_perm);
+            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', no_perm));
 
         } else {
 
             if (!(sender instanceof Player)) {
 
-                sender.sendMessage(ChatColor.RED + plugin.getConfig().getString("messages.not_player_send_command"));
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', Objects.requireNonNull(plugin.getConfig().getString("messages.not_player_send_command"))));
                 return true;
 
             }
@@ -53,7 +53,7 @@ public class SetTeleportCommand implements CommandExecutor {
             plugin.getConfig().set("teleport_coordinates.pitch", loc.getPitch());
             plugin.saveConfig();
 
-            player.sendMessage(ChatColor.YELLOW + plugin.getConfig().getString("messages.teleport_point"));
+            player.sendMessage(ChatColor.translateAlternateColorCodes('&', Objects.requireNonNull(plugin.getConfig().getString("messages.teleport_point"))));
 
         }
 

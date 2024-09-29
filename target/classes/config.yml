@@ -11,12 +11,13 @@ teleport_coordinates:
   pitch: 0.0
 
 messages:
-  no_permission: "You do not have {permission} to run this command."
-  teleport_point: "Teleport location and direction set !"
-  not_player_send_command: "This command can only be executed by a player."
-  player_not_found: "Player not found."
-  usage_teleport: "/teleport [Player]"
-  sender_teleport: " has been teleported to the server spawn."
-  target_teleport: "You've been teleported to the server spawn."
-  success_reload: "Configuration reloaded."
-  commands: "Available commands :"
+  no_permission: "&eYatsuuTeleport&f >&4 You do not have {permission} to run this command."
+  teleport_point: "&eYatsuuTeleport&f >&a Teleport location and direction set !"
+  not_player_send_command: "&eYatsuuTeleport&f >&c This command can only be executed by a player."
+  player_not_found: "&eYatsuuTeleport&f >&c Player not found."
+  usage_teleport: "&eYatsuuTeleport&f >&4 /teleport [Player]"
+  sender_teleport: "&eYatsuuTeleport&f >&a {player} has been teleported to the server spawn."
+  target_teleport: "&eYatsuuTeleport&f >&a You've been teleported to the server spawn."
+  success_reload: "&eYatsuuTeleport&f >&a Configuration reloaded."
+  commands: "&eYatsuuTeleport&f >&a Available commands :"
+  command_format: "&e/{command} : &f{description}"

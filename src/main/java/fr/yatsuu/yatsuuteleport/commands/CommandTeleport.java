@@ -29,13 +29,13 @@ public class CommandTeleport implements CommandExecutor {
         if (!sender.hasPermission("yatsuuteleport.command.teleport")) {
 
             String no_perm = Objects.requireNonNull(plugin.getConfig().getString("messages.no_perm")).replace("{permission}", "yatsuuteleport.command.teleport");
-            sender.sendMessage(ChatColor.RED + no_perm);
+            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', no_perm));
 
         } else {
 
             if (args.length > 1) {
 
-                sender.sendMessage(ChatColor.RED + plugin.getConfig().getString("messages.usage_teleport"));
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', Objects.requireNonNull(plugin.getConfig().getString("messages.usage_teleport"))));
                 return true;
 
             }
@@ -48,7 +48,7 @@ public class CommandTeleport implements CommandExecutor {
 
                 if (target == null) {
 
-                    sender.sendMessage(ChatColor.RED + plugin.getConfig().getString("messages.player_not_found"));
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', Objects.requireNonNull(plugin.getConfig().getString("messages.player_not_found"))));
                     return true;
 
                 }
@@ -59,7 +59,7 @@ public class CommandTeleport implements CommandExecutor {
 
             } else {
 
-                sender.sendMessage(ChatColor.RED + plugin.getConfig().getString("messages.not_player_send_command"));
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', Objects.requireNonNull(plugin.getConfig().getString("messages.not_player_send_command"))));
                 return true;
 
             }
@@ -83,12 +83,12 @@ public class CommandTeleport implements CommandExecutor {
 
             if (sender != target) {
 
-                sender.sendMessage(ChatColor.GREEN + target.getName() + plugin.getConfig().getString("messages.sender_teleport"));
-                target.sendMessage(ChatColor.GREEN + target.getName() + plugin.getConfig().getString("messages.target_teleport"));
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', Objects.requireNonNull(Objects.requireNonNull(plugin.getConfig().getString("messages.sender_teleport")).replace("{player}", target.getName()))));
+                target.sendMessage(ChatColor.translateAlternateColorCodes('&', Objects.requireNonNull(plugin.getConfig().getString("messages.target_teleport"))));
 
             } else {
 
-                sender.sendMessage(ChatColor.GREEN + plugin.getConfig().getString("messages.target_teleport"));
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', Objects.requireNonNull(plugin.getConfig().getString("messages.target_teleport"))));
 
             }
 

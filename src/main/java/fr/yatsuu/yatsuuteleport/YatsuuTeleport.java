@@ -26,7 +26,7 @@ public final class YatsuuTeleport extends JavaPlugin {
         // Register commands
         Objects.requireNonNull(getCommand("setteleport")).setExecutor(new SetTeleportCommand(this));
         Objects.requireNonNull(getCommand("teleport")).setExecutor(new CommandTeleport(this));
-        Objects.requireNonNull(getCommand("reloadconfig")).setExecutor(new ReloadConfigCommand(this));
+        Objects.requireNonNull(getCommand("ytload")).setExecutor(new ReloadConfigCommand(this));
         Objects.requireNonNull(getCommand("ythelp")).setExecutor(new HelpCommand(this));
 
     }
