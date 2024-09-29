@@ -1,7 +1,6 @@
 fr\yatsuu\yatsuuteleport\commands\ytLoadCommand.class
 fr\yatsuu\yatsuuteleport\YatsuuTeleport.class
 fr\yatsuu\yatsuuteleport\commands\ytHelpCommand.class
-fr\yatsuu\yatsuuteleport\commands\ReloadConfigCommand.class
 fr\yatsuu\yatsuuteleport\events\PlayerJoinListener.class
 fr\yatsuu\yatsuuteleport\commands\SetTeleportCommand.class
 fr\yatsuu\yatsuuteleport\commands\TeleportCommand.class
